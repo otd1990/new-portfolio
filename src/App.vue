@@ -10,6 +10,7 @@
       <ProjectTiles />
     </section>
   </main>
+  <article class="footer__banner">This site is in BETA and is still in development</article>
 </template>
 
 <script setup>
@@ -21,5 +22,19 @@ import ProjectTiles from './components/ProjectTiles.vue'
 <style>
 .main {
   margin-bottom: 1.5rem;
+}
+
+.footer__banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: #f7f7f7;
+  width: 100%;
+  text-align: center;
+  box-shadow: -1px 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 </style>
