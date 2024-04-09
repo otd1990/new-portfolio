@@ -8,7 +8,6 @@
       <div
         :class="`project__content project__content--${project.id}`"
         :style="{
-          backgroundImage: `url(${getImagePath(project.imageName)})`,
           backgroundColor: `${project.backgroundColour}`
         }"
       >
@@ -38,16 +37,11 @@
               Built using:
 
               <span v-for="n in project.builtWith" :key="n" class="project__skills-icon">
-                <img
-                  :key="n"
-                  :src="`/${n}.svg`"
-                  :alt="n"
-                  class="project__skills-icon"
-                  style="height: 30px; width: 30px"
-                />
+                <img :key="n" :src="`/${n}.svg`" :alt="n" class="project__skills-icon" />
               </span>
             </div>
           </div>
+          <img :src="getImagePath(project.imageName)" />
         </a>
       </div>
     </section>
@@ -132,8 +126,8 @@ const getImagePath = (imageName) => {
   text-decoration: none;
   border-radius: 100%;
   background: #f7f7f7;
-  min-width: 40px;
-  min-height: 40px;
+  min-width: 30px;
+  min-height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,7 +148,7 @@ const getImagePath = (imageName) => {
   color: #f7f7f7;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 3.5rem 9.5rem;
+  background-position: 3.5rem 8.5rem;
 }
 
 .project__external-link {
@@ -164,8 +158,8 @@ const getImagePath = (imageName) => {
   justify-content: center;
 
   > img {
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
   }
 }
 
@@ -175,6 +169,14 @@ const getImagePath = (imageName) => {
   height: 100%;
   width: 100%;
   display: block;
+
+  > img {
+    height: 100%;
+    width: 100%;
+    transform: translate(3rem, 0);
+    display: block;
+    margin-left: auto;
+  }
 }
 
 .project__top {
@@ -192,8 +194,8 @@ const getImagePath = (imageName) => {
 }
 
 .project__skills-icon {
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,6 +204,11 @@ const getImagePath = (imageName) => {
   color: #272829;
 
   margin: 0 0.25rem;
+
+  > img {
+    height: 25px;
+    width: 25px;
+  }
 }
 
 .project__info {

@@ -9,19 +9,23 @@
     <section id="projects">
       <ProjectTiles />
     </section>
+    <Section id="contact">
+      <ContactMe />
+    </Section>
   </main>
-  <article class="footer__banner">This site is in BETA and is still in development</article>
+  <!-- <article class="footer__banner">This site is in BETA and is still in development</article> -->
 </template>
 
 <script setup>
 import HeaderNav from './components/HeaderNav.vue'
 import AboutMe from './components/AboutMe.vue'
 import ProjectTiles from './components/ProjectTiles.vue'
+import ContactMe from './components/ContactMe.vue'
 </script>
 
 <style>
 .main {
-  margin-bottom: 1.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .footer__banner {
