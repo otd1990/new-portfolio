@@ -1,7 +1,7 @@
 <template>
   <article class="contact card gradient-background border-radius-std">
     <h2 class="contact__heading">Get In Touch</h2>
-    <form class="contact__form" @submit.prevent="handleSubmit">
+    <form class="contact__form" method="POST" @submit.prevent="handleSubmit">
       <div class="contact__form-group">
         <label class="contact__form-label" for="contactName">Name</label>
         <input
@@ -37,19 +37,37 @@
           v-model="contactComment"
         />
       </div>
+      <div class="contact__form-button-container">
+        <button class="contact__form-btn">Submit</button>
+      </div>
     </form>
   </article>
 </template>
 
 <script setup>
+import emailjs from 'emailjs-com'
 import { ref } from 'vue'
 
 const contactName = ref('')
 const contactEmail = ref('')
 const contactComment = ref('')
 
-const handleSubmit = () => {
-  console.log('Submitting')
+const handleSubmit = (e) => {
+  console.log(contactName.value, contactEmail.value, contactComment.value)
+  if (contactName.value === '' && contactEmail.value === '') return
+
+  emailjs
+    .sendForm('service_kqh6ulf', 'template_vgugdg4', e.target, 'BDMNT6JrKNvNIiv4f', {
+      name: contactName.value,
+      email: contactEmail.value,
+      message: contactComment.value
+    })
+    .then((response) => console.log(response))
+
+  // Reset form field
+  contactName.value = ''
+  contactEmail.value = ''
+  contactComment.value = ''
 }
 </script>
 
@@ -76,6 +94,15 @@ const handleSubmit = () => {
   width: 100%;
   padding: 0.5rem;
   border-radius: 4px;
-  border: 1px solid #aca8a8;
 }
+
+.contact__form-btn {
+  display: block;
+  margin: 0 auto;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* service_kqh6ulf */
 </style>
