@@ -23,13 +23,15 @@ body {
 }
 
 .card {
-  padding: 1rem;
+  padding: 2rem;
   align-items: center;
 }
 
 .card__title {
   font-size: 40px;
   line-height: 47px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
 }
 
 .text-center {
@@ -81,5 +83,8 @@ body {
     hsla(42, 81%, 78%, 1) 100%
   );
 
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F1F1F1", endColorstr="#CCDCCF", GradientType=1 );
+  background: rgb(61, 84, 178);
+
+  background: linear-gradient(to right, rgb(116, 181, 235), rgb(61, 84, 178));
+  color: white !important;
 }

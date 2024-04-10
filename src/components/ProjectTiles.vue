@@ -99,6 +99,15 @@ const projects = [
     url: 'https://odyer755.github.io/',
     imageName: 'old-profile.png',
     backgroundColour: '#006a71'
+  },
+  {
+    id: 6,
+    name: 'Gallery App v1',
+    description: 'My first portfolio',
+    builtWith: ['vue', 'css'],
+    url: 'https://otd1990.github.io/gallery-app/',
+    imageName: 'gallery-app.png',
+    backgroundColour: '#070F2B'
   }
 ]
 

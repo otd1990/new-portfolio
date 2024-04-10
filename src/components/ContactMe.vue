@@ -103,6 +103,15 @@ const handleSubmit = (e) => {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  font-family: 'Raleway', sans-serif;
 }
-/* service_kqh6ulf */
+
+.contact__form-btn:hover {
+  background-color: rgb(187 187 187);
+  color: #fff;
+}
 </style>
