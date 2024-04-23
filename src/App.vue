@@ -9,6 +9,9 @@
     <section id="projects">
       <ProjectTiles />
     </section>
+    <section id="cv-download">
+      <DownloadCv />
+    </section>
     <Section id="contact">
       <ContactMe />
     </Section>
@@ -21,6 +24,7 @@ import HeaderNav from './components/HeaderNav.vue'
 import AboutMe from './components/AboutMe.vue'
 import ProjectTiles from './components/ProjectTiles.vue'
 import ContactMe from './components/ContactMe.vue'
+import DownloadCv from './components/DownloadCv.vue'
 </script>
 
 <style>

@@ -11,6 +11,9 @@
         <li class="header__nav-list-item">
           <a href="#contact" class="header__nav-list-link">Contact</a>
         </li>
+        <li class="header__nav-list-item">
+          <a href="#cv-download" class="header__nav-list-link">My CV</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -28,8 +31,12 @@
   align-items: center;
 }
 
+.header__nav-list-item {
+  padding: 0.25rem 0 0.25rem 0.25rem;
+}
+
 .header__nav-list-item:not(:last-child) {
-  padding: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .header__nav-list {
